@@ -31,7 +31,7 @@ Toasts específicos são exibidos conforme o ambiente; além de um toast alertan
 | Links              | Url        | Link de conexão à API                                              |
 | :----------------- | :--------- | :----------------------------------------------------------------- |
 | `Página default`   | `/default` | `https://frontend-challenge-7bu3nxh76a-uc.a.run.app`               |
-| `Delay de conexão` | `/timeout` | `https://frontend-challenge-7bu3nxh76a-uc.a.run.app?delay=2500`    |
+| `Delay de conexão` | `/delay`   | `https://frontend-challenge-7bu3nxh76a-uc.a.run.app?delay=2500`    |
 | `Tempo esgotado`   | `/timeout` | `https://frontend-challenge-7bu3nxh76a-uc.a.run.app?delay=10000`   |
 | `Erro no servidor` | `/error`   | `https://frontend-challenge-7bu3nxh76a-uc.a.run.app?internalError` |
 
