@@ -5,7 +5,7 @@ const lento = {
     description: 'Por favor aguarde o carregamento',
     status: 'warning',
     isClosable: false,
-    duration: 5000,
+    duration: 4000,
     position: 'top',
 }
 

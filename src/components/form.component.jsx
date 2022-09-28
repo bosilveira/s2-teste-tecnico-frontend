@@ -24,6 +24,7 @@ export const Form = ({ url }) => {
     }
 
     const calculoHandler = (e) => {
+        console.log(e.target)
         toast.closeAll()
         if (e.target.id === 'valor') setValor(e.target.value)
         if (e.target.id === 'parcelas') setParcelas(e.target.value)
@@ -48,6 +49,7 @@ export const Form = ({ url }) => {
     },[dados.status])
 
     React.useEffect(()=>{
+        console.log(valor, parcelas, mdr)
         const tempo = 750
         const dispara = setTimeout(() => {
             fetchHandler()
@@ -72,7 +74,7 @@ export const Form = ({ url }) => {
                         <NumberInput min={1000} defaultValue={1000} precision={2} step={1}  w='100%'>
                             <InputLeftElement children='R$'/>
                             <NumberInputField paddingLeft='40px' value={valor} id='valor'
-                             onChange={calculoHandler} onKeyUp={calculoHandler}/>
+                             onChange={calculoHandler} onKeyUp={calculoHandler} onInput={calculoHandler}/>
                         </NumberInput>
                     </InputGroup>
                     <FormHelperText></FormHelperText>
@@ -81,7 +83,7 @@ export const Form = ({ url }) => {
                     <FormLabel>Em quantas parcelas *</FormLabel>
                     <NumberInput min={1} max={12} defaultValue={12} precision={0} step={1}>
                         <NumberInputField value={parcelas} id='parcelas'
-                        onChange={calculoHandler} onKeyUp={calculoHandler}/>
+                        onChange={calculoHandler} onKeyUp={calculoHandler} onInput={calculoHandler}/>
                         </NumberInput>
                     <FormHelperText>Máximo de 12 parcelas</FormHelperText>
                 </FormControl>
@@ -89,7 +91,7 @@ export const Form = ({ url }) => {
                     <FormLabel>Informe o percentual de MDR *</FormLabel>
                     <NumberInput min={0} defaultValue={2} precision={2} step={0.2}>
                         <NumberInputField value={mdr} id='mdr'
-                        onChange={calculoHandler} onKeyUp={calculoHandler}/>
+                        onChange={calculoHandler} onKeyUp={calculoHandler} onInput={calculoHandler}/>
                         </NumberInput>
                     <FormHelperText></FormHelperText>
                 </FormControl>

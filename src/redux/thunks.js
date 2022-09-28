@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const limite = 2000
+const lentidao = 1000
 const timeout = 5000
 const temporizador = new AbortController();
 
@@ -10,7 +10,7 @@ export const fetchThunk = (url, data) => (dispatch) => {
             type: "@fetch.lento",
             payload: null
         })
-    }, limite)
+    }, lentidao)
     dispatch({
         type: "@fetch.conectando",
         payload: data
@@ -39,7 +39,6 @@ export const fetchThunk = (url, data) => (dispatch) => {
                     payload: null
                 })
             }
-
             if (error.response?.status === 408) {
                 dispatch({
                     type: "@fetch.esgotado",
