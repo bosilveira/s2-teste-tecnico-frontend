@@ -14,7 +14,7 @@ const erro = {
     title: 'Não foi possível conectar ao servidor',
     description: 'Por favor verifique sua conexão',
     status: 'error',
-    isClosable: true,
+    isClosable: false,
     duration: null,
     position: 'top',
 }
